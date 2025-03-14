@@ -40,7 +40,7 @@ dependencies {
     api(libs.androidx.core.ktx)
     api(libs.androidx.lifecycle.runtime.ktx)
 
-    //compose
+    //composeUI
     api(libs.androidx.activity.compose)
     api(platform(libs.androidx.compose.bom))
     api(libs.androidx.ui)
@@ -50,10 +50,34 @@ dependencies {
 
 
     //核心库及UI
-   api(libs.androidx.appcompat)
-   api(libs.material)
+    api(libs.androidx.appcompat)
+    api(libs.material)
+    api(libs.androidx.constraintlayout)
+
+    //Jetpack组件
+    //键值对存储
+    api(libs.datastore.preferences)
 
 
+    //xcrash
+    api("com.iqiyi.xcrash:xcrash-android-lib:3.0.0")
+    //日志记录 XLog
+    api("com.elvishew:xlog:1.11.0")
+    // 工具类
+    api("com.blankj:utilcodex:1.31.1")
+    //网络请求
+    api("com.squareup.okhttp3:okhttp:4.12.0")
+    api("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    api("com.squareup.retrofit2:retrofit:2.11.0")
+    api("com.squareup.retrofit2:converter-gson:2.11.0")
+    api("com.squareup.retrofit2:converter-scalars:2.8.1")
+    // MQTT
+    api("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
+    api("org.eclipse.paho:org.eclipse.paho.android.service:1.1.1")
+    // 协程
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+    //动效
+    api("com.airbnb.android:lottie:6.3.0")
 
 }
 
@@ -65,7 +89,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.zsq7777"
                 artifactId = "ZJetStarter"
-                version = "1.0.0"
+                version = "0.0.2"
             }
         }
     }
